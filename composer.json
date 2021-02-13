@@ -1,0 +1,32 @@
+{
+    "name": "njenga55/service-provider",
+    "description": "This packge will help identify the different service provider for each phone number in kenya",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Kevin Njenga",
+            "email": "njenga55@gmail.com"
+        }
+    ],
+    "require": {},
+    "require-dev": {
+        "orchestra/testbench": "^6.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Njenga55\\ServiceProvider\\":"src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "njenga55\\ServiceProvider\\Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Njenga55\\ServiceProvider\\MobileServiceProvider"
+            ]
+        }
+    }
+}
