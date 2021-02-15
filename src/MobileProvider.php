@@ -37,7 +37,7 @@ class MobileProvider
     private function validatePhoneNumber($phoneNumber): void
     {
         $number = substr($phoneNumber, -9);
-        preg_match('/[7]\d{8}/', $number, $matches);
+        preg_match('/[7,1]\d{8}/', $number, $matches);
         if (count($matches) !== 1) {
             throw new InvalidPhoneNumberException;
         }

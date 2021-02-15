@@ -5,12 +5,12 @@ namespace Njenga55\ServiceProvider\providers;
 class Airtel
 {
     protected static $firstLevelPrefix = [
-        8,
+        78, 10,
     ];
 
     protected static $secondLevelPrefix = [
-        30 , 31 , 32 , 33 , 34 , 35 , 36 , 37 , 38 , 39,
-        50, 51 , 52 , 53 , 54 , 55, 56, 62,
+        730, 731, 732 , 733, 734, 735, 736, 737, 738, 739,
+        750, 751, 752, 753, 754, 755, 756, 762,
     ];
 
     /**
@@ -22,9 +22,9 @@ class Airtel
      */
     public static function isProvider($phoneNumber): bool
     {
-        $startingCharcters = substr($phoneNumber, 1, 2);
+        $startingCharcters = substr($phoneNumber, 0, 3);
 
-        if (in_array(substr($startingCharcters, 0, 1), self::$firstLevelPrefix)) {
+        if (in_array(substr($startingCharcters, 0, 2), self::$firstLevelPrefix)) {
             return true;
         }
 

@@ -28,12 +28,22 @@ class MobileNumberTest extends TestCase
             'Safaricom',
             (new MobileProvider())->getProvider($phone)
         );
+        $phone = '0113835186';
+        $this->assertEquals(
+            'Safaricom',
+            (new MobileProvider())->getProvider($phone)
+        );
     }
 
     /*tests*/
     public function testProviderIsAirtel()
     {
         $phone = '0733835186';
+        $this->assertEquals(
+            'Airtel',
+            (new MobileProvider())->getProvider($phone)
+        );
+        $phone = '0103835186';
         $this->assertEquals(
             'Airtel',
             (new MobileProvider())->getProvider($phone)
