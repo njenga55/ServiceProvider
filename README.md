@@ -16,7 +16,7 @@ Laravel
 
   MobileProvider::getProvider($phoneNumber)
 ```
-This will return either of the folowing providers and **`null`** if none is found.
+This will return either of the following providers and **`null`** if none is found.
 - Safaricom
 - Airtel
 - Equitel
