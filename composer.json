@@ -28,5 +28,10 @@
                 "Njenga55\\ServiceProvider\\MobileServiceProvider"
             ]
         }
+    },
+    "scripts": {
+        "test": [
+            "./vendor/bin/phpunit tests/Feature"
+        ]
     }
 }
